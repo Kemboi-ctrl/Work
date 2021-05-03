@@ -1,0 +1,419 @@
+*{
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+body{
+    overflow-x: hidden;
+    text-align: center;
+}
+nav{
+    margin: 0;
+    padding: 0;
+    height: 6rem;
+    width: 100vw;
+    background-color:white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 5rem;
+    width: 11rem;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+    color: black;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #000;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
+}
+a:visited { 
+    text-decoration: none; 
+    color: black; 
+   }
+
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background:#666;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+        
+    }
+    .nav-links{
+        position: fixed;
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+/* The Middle */
+.PageOne1{
+    background: url(../Images/Evanson3dBetter.JPG)center / cover;
+    background-repeat: no-repeat;
+    margin:0 0 60px 0;
+    padding: 15%;
+    box-shadow: inset 0 0 20px 10px rgba(0,10,30,.8);
+
+}
+.PageOne{
+    margin:100px 100px 200px 100px;
+    padding: 15%;
+    box-shadow: inset 0 0 20px 10px rgba(0,10,30,.8);
+
+}
+.RealtorsReport{
+    padding: 100px 100px;
+    box-shadow: inset 0 0 20px 10px rgba(0,10,30,.8);
+}
+.PageOne1 h2{
+    position: relative;
+    margin: 50px;
+    padding: 50px;
+    line-height: 2;
+    font-weight: 900;
+}
+
+.PageOne h1{
+    font-size: 500%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+/* footer li{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 100px 100px 100px 100px;
+} */
+
+.zillow{
+    width: 100%;
+}
+
+.idustry{
+    width: 100%;
+}
+/* Iframe */
+.HomeBuyers{
+
+    line-height: 1.65;
+    text-align: left;
+    margin: 100px auto 100px auto;
+}
+
+  .HomeBuyers img{
+      
+      margin-left: 30%;
+  }
+
+  @media screen and (min-width: 924px){
+    .HomeBuyers img{
+        margin: 0px 100px;
+        float: left;
+    }
+    .HomeBuyers{
+
+        line-height: 3;
+        text-align: left;
+        margin: 100px auto 100px auto;
+    }
+  }
+ 
+  .AboutUs{
+      margin-top: 10%;
+      margin-bottom: 10%;
+      max-width: 800px;
+      text-align: center;
+      line-height: 2;
+      justify-content: center;
+      align-items: center;
+      display: inline-block;
+  }
+  
+  
+  /* Contact page */
+  .Contact{
+      position: relative;
+      margin: 100px 100px 100px 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: left;
+      background: url(../Images/Evanson3D.JPG)center/cover;
+  }
+  .Contact .Content{
+      max-width: 800px;
+      text-align: center;
+      box-shadow: inset 0 0 20px 10px rgba(0,10,30,.8);
+  }
+  .Contact .Content h1{
+      font-size: 500%;
+      font-weight: 500;
+      color: lightgrey;
+  }
+   .Contact p{
+    font-weight: 900;
+    color: lightgrey;
+}
+.Contact h2{
+    font-weight: 900;
+    color: black;
+}
+.Container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.Container .ContactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.Container .ContactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.Container .ContactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px ;
+}
+.Container .ContactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+}
+.Container .ContactInfo .box .text h3{
+    font-weight: 900;
+    color: lightseagreen;
+}
+.ContactForm{
+    width: 40%;
+    padding: 40px;
+    background: white;
+}
+.ContactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 900;
+}
+.ContactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.ContactForm .inputBox input,
+.ContactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.ContactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.ContactForm .inputBox input:focus ~ span,
+.ContactForm .inputBox input:valid ~ span,
+.ContactForm .inputBox textarea:focus ~ span,
+.ContactForm .inputBox textarea:valid ~ span{
+    color: #fff;
+    font-size: 1px;
+    transition: translateY(-20px);
+}
+.ContactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: lightseagreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+    .Contact{
+        padding: 50px;
+    }
+    .Container{
+        flex-direction: column;
+    }
+    .Contact .ContactInfo{
+        margin-bottom: 40px;
+    }
+    .Container .ContactInfo, .ContactForm{
+        width: 100%;
+    }
+}
+/* Workers */
+.Reid, .Brandon{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+    object-fit: cover;
+    
+  }
+  .Reid{
+      float: left;
+      margin-right: 50px;
+  }
+  .Brandon{
+      float: right;
+      margin-left: 50px;
+  }
+  .SecondBoss{
+    margin: 20% 20%;
+    line-height: 2;
+    margin-left: 30px;
+  }
+  .FirstBoss{
+      margin: 20% 20%;
+      line-height: 2;
+      margin-right: 30px;
+  }
+  .Staff{
+    margin:100px 100px 200px 100px;
+    padding: 15%;
+    font-size: 500%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: inset 0 0 20px 10px rgba(0,10,30,.8);
+  }
+
+  @media(max-width: 1000px){
+  .Brandon{
+    margin-left: 50px;
+}
+.SecondBoss{
+    line-height: 2;
+    
+  }
+  }
